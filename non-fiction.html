@@ -1,0 +1,257 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+<link rel="stylesheet" href="non-fiction.css" >
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+</head>
+<body>
+    <!-- <div class="navbar">
+        
+            <h1 class="logo">Demo</h1>
+      <div class="forA">  
+        <a href="Index.html">Home</a>
+        <div class="search-box">
+            <label for="search">Search:</label>
+            <input type="text" id="search" placeholder="Search books..." onkeyup="searchProducts()">
+            <div class="book-type">
+                <select id="bookType">
+                    <option value="all">All Types</option>
+                    <option value="fiction"><a href="fiction.html">Fiction</a></option>
+                    <option value="nonfiction">Non-fiction</option>
+                    <option value="education">Educational</option>
+                </select>
+            </div>
+        </div>
+        <a href="1st.html">Log in</a>
+      </div>
+    </div>
+    <section id="headerforpage">
+        <h1>Featured Products</h1>
+    </section> -->
+    <div class="navbar">
+        <h1 class="logo">Demo</h1>
+        <div class="forA">  
+            <a href="Index.html" class="active"><i class="fas fa-home"></i> Home</a>
+            <div class="search-box">
+                <div class="search-container">
+                    <i class="fas fa-search"></i>
+                    <input type="text" id="search" placeholder="Search books..." onkeyup="searchProducts()">
+                </div>
+                <div class="book-type">
+                    <select id="bookType" onchange='Switchpage()'>
+                        <option value="3rd.html">All Types</option>
+                        <option value="fiction.html">Fiction</option>
+                        <option value="nonfiction">Non-fiction</option>
+                        <option value="education.html">Educational</option>
+                    </select>
+                </div>
+            </div>
+            <a href="1st.html"><i class="fas fa-user"></i> Log in</a>
+        </div>
+    </div>
+
+    <section id="headerforpage">
+        <div class="header-content">
+            <h1>Featured Products</h1>
+            <p>Discover our collection of best-selling books</p>
+        </div>
+    </section>
+
+    <div id="productlist">
+        <div class="productitem">
+      <img src="nonfic1.jpeg"   alt="Product Image">
+      <h2 class="producttitle">In Cold Blood</h2>
+      <p class="product-description">In Cold Blood is a non-fiction novel by the American author Truman Capote, first published in 1966. It details the 1959 Clutter family murders in the small farming community of Holcomb, Kansas. Capote learned of the quadruple murder before the killers were captured, and he traveled to Kansas to write about the crime </p>
+      <div class="rating">
+        <i class="fas fa-star"></i>
+        <i class="fas fa-star"></i>
+        <i class="fas fa-star"></i>
+        <i class="fas fa-star"></i>
+        <i class="fas fa-star-half-alt"></i>
+        <span>(24)</span>
+    </div>
+      <span class="product-price">$29.99</span>
+      <button class="addcart-btn"   data-product="Product 1"><i class="fas fa-cart-plus"></i>Add to Cart</button><br>
+      <span class="rental-price">Rent: $5.99</span>
+      <button class="rent-btn" data-title="In Cold Blood"  data-price="5.99"> <i class="fas fa-book-open"></i> Rent</button>
+  </div>
+    <div class="productitem">
+      <img src="nonfic2.jpeg" alt="Product Image" >
+      <h2 class="producttitle">A Brief History of Time</h2>
+      <p class="product-description">A Brief History of Time: From the Big Bang to Black Holes is a book on cosmology by the physicist Stephen Hawking. It was first published in 1988. Hawking writes in non-technical terms about the structure, origin, development and eventual fate of the universe.</p>
+      <div class="rating">
+        <i class="fas fa-star"></i>
+        <i class="fas fa-star"></i>
+        <i class="fas fa-star"></i>
+        <i class="fas fa-star"></i>
+        <i class="fas fa-star-half-alt"></i>
+        <span>(24)</span>
+    </div>
+      <span class="product-price">$19.99</span>
+      <button class="addcart-btn"   data-product="Product 2"><i class="fas fa-cart-plus"></i>Add to Cart</button><br>
+      <span class="rental-price">Rent: $3.99</span>
+      <button class="rent-btn" data-title="A Brief History of Time" data-price="5.99"><i class="fas fa-book-open"></i>Rent</button>
+  </div>
+  <div class="productitem">
+      <img src="nonfic3.jpeg" alt="Product Image">
+      <h2 class="producttitle">Sapiens: A Brief History of Humankind</h2>
+      <p class="product-description">Sapiens: A Brief History of Humankind is a book by Yuval Noah Harari, based on a series of lectures he taught at The Hebrew University of Jerusalem. It was first published in Hebrew in Israel in 2011, and in English in 2014. </p>
+      <div class="rating">
+        <i class="fas fa-star"></i>
+        <i class="fas fa-star"></i>
+        <i class="fas fa-star"></i>
+        <i class="fas fa-star"></i>
+        <i class="fas fa-star-half-alt"></i>
+        <span>(24)</span>
+    </div>
+      <span class="product-price">$25.99</span>
+      <button class="addcart-btn"   data-product="Product 3"><i class="fas fa-cart-plus"></i>Add to Cart</button><br>
+      <span class="rental-price">Rent: $3.99</span>
+      <button class="rent-btn" data-title="Sapiens: A Brief History of Humankind" data-price="5.99"><i class="fas fa-book-open"></i>Rent</button>
+  </div>
+  
+  <div class="productitem">
+      <img src="nonfic4.jpeg" alt="Product Image">
+      <h2 class="producttitle">Silent Spring</h2>
+      <p class="product-description">Silent Spring is an environmental science book by Rachel Carson. Published on September 27, 1962, the book documented the environmental harm caused by the indiscriminate use of DDT, a pesticide used by soldiers during World War II. </p>
+      <div class="rating">
+        <i class="fas fa-star"></i>
+        <i class="fas fa-star"></i>
+        <i class="fas fa-star"></i>
+        <i class="fas fa-star"></i>
+        <i class="fas fa-star-half-alt"></i>
+        <span>(24)</span>
+    </div>
+      <span class="product-price">$19.99</span>
+      <button class="addcart-btn"   data-product="Product 4"><i class="fas fa-cart-plus"></i>Add to Cart</button><br>
+      <span class="rental-price">Rent: $4.59</span>
+      <button class="rent-btn" data-title="Silent Spring" data-price="5.99"><i class="fas fa-book-open"></i>Rent</button>
+  </div>
+  <div class="productitem">
+      <img src="nonfic5.jpeg" alt="Product Image">
+      <h2 class="producttitle">Between the World and Me </h2>
+      <p class="product-description">Between the World and Me is a 2015 nonfiction book written by American author Ta-Nehisi Coates and published by Spiegel & Grau. It was written by Coates as a letter to his then-teenage son about his perception of what the feelings, symbolism, and realities associated with being Black in the United States are.</p>
+      <div class="rating">
+        <i class="fas fa-star"></i>
+        <i class="fas fa-star"></i>
+        <i class="fas fa-star"></i>
+        <i class="fas fa-star"></i>
+        <i class="fas fa-star-half-alt"></i>
+        <span>(24)</span>
+    </div>
+      <span class="product-price">$10.99</span>
+      <button class="addcart-btn"   data-product="Product 5"><i class="fas fa-cart-plus"></i>Add to Cart</button><br>
+      <span class="rental-price">Rent: $4.59</span>
+      <button class="rent-btn" data-title="Between the World and Me" data-price="5.99"><i class="fas fa-book-open"></i>Rent</button>
+  </div>
+  <div class="productitem">
+      <img src="nonfic6.png" alt="Product Image">
+      <h2 class="producttitle">Outliers</h2>
+      <p class="product-description">Outliers: The Story of Success is a non-fiction book written by Malcolm Gladwell and published by Little, Brown and Company on November 18, 2008. In Outliers, Gladwell examines the factors that contribute to high levels of success.</p>
+      <div class="rating">
+        <i class="fas fa-star"></i>
+        <i class="fas fa-star"></i>
+        <i class="fas fa-star"></i>
+        <i class="fas fa-star"></i>
+        <i class="fas fa-star-half-alt"></i>
+        <span>(24)</span>
+    </div>
+      <span class="product-price">$17.99</span>
+      <button class="addcart-btn"   data-product="Product 6"><i class="fas fa-cart-plus"></i>Add to Cart</button><br>
+      <span class="rental-price">Rent: $4.59</span>
+      <button class="rent-btn" data-title="Outliers" data-price="5.99"><i class="fas fa-book-open"></i>Rent</button>
+  </div>
+  <div class="productitem">
+      <img src="nonfic7.jpeg" alt="Product Image">
+      <h2 class="producttitle">H is for Hawk </h2>
+      <p class="product-description">H is for Hawk tells Macdonald's story of the year they spent training a Eurasian goshawk in the wake of their father's death. Their father, Alisdair Macdonald, was a respected photojournalist who died suddenly of a heart attack in 2007. Having been a falconer for many years, they purchased a young goshawk to help them through the grieving process. </p>
+      <div class="rating">
+        <i class="fas fa-star"></i>
+        <i class="fas fa-star"></i>
+        <i class="fas fa-star"></i>
+        <i class="fas fa-star"></i>
+        <i class="fas fa-star-half-alt"></i>
+        <span>(24)</span>
+    </div>
+      <span class="product-price">$18.99</span>
+      <button class="addcart-btn"   data-product="Product 7"><i class="fas fa-cart-plus"></i>Add to Cart</button><br>
+      <span class="rental-price">Rent: $4.59</span>
+      <button class="rent-btn" data-title="H is for Hawk" data-price="5.99"><i class="fas fa-book-open"></i>Rent</button>
+    </div>
+  <div class="productitem">
+      <img src="nonfic8.jpeg" alt="Product Image">
+      <h2 class="producttitle">Hiroshima</h2>
+      <p class="product-description">Hiroshima is a 1946 book by American author John Hersey. It tells the stories of six survivors of the atomic bomb dropped on Hiroshima. It is regarded as one of the earliest examples of New Journalism, in which the story-telling techniques of fiction are adapted to non-fiction reporting.</p>
+      <div class="rating">
+        <i class="fas fa-star"></i>
+        <i class="fas fa-star"></i>
+        <i class="fas fa-star"></i>
+        <i class="fas fa-star"></i>
+        <i class="fas fa-star-half-alt"></i>
+        <span>(24)</span>
+    </div>
+      <span class="product-price">$16.99</span>
+      <button class="addcart-btn"   data-product="Product 8"><i class="fas fa-cart-plus"></i>Add to Cart</button><br>
+      <span class="rental-price">Rent: $4.59</span>
+      <button class="rent-btn" data-title="Hiroshima" data-price="5.99"><i class="fas fa-book-open"></i>Rent</button>
+
+  </div>
+<div id="Pagination">
+    <a href="#">1</a>
+    <a href="#">2</a>
+    <a href="#"><i class="fas fa-chevron-right"></i></a>
+    <!-- <a href="#" class="fal fa-long-arrow-alt-right"></a> -->
+</div>
+
+
+  </div>
+  
+  <!-- <div id="Pagination">
+    <a href="#" class="active">1</a>
+    <a href="#">2</a>
+    <a href="#">3</a>
+    <a href="#"><i class="fas fa-chevron-right"></i></a>
+</div> -->
+  <!-- <footer>
+    <diV id="footer1">
+        <h1>Demo</h1>
+    <h4>Contact</h4>
+    <p><strong>Address:</strong>Bansree, Rampura ,Dhaka-1219</p>
+    <p><strong>Phone:</strong>+880 17 18 291 </p>
+    <p><strong>Hours:</strong>10.00 am-18.00 pm</p>
+</div>
+<div>
+    <p>&copy; 2024 Your Company Name. All rights reserved.</p>
+</div>
+</footer> -->
+<div id="footer1">
+    <div class="footer-col">
+        <h1>Demo</h1>
+        <p>Your trusted online bookstore since 2020</p>
+    </div>
+    <div class="footer-col">
+        <h4>Contact</h4>
+        <p><i class="fas fa-map-marker-alt"></i> Bansree, Rampura, Dhaka-1219</p>
+        <p><i class="fas fa-phone"></i> +880 17 18 291</p>
+        <p><i class="fas fa-clock"></i> 10.00 am-18.00 pm</p>
+    </div>
+    <div class="footer-col">
+        <h4>Follow Us</h4>
+        <div class="social-links">
+            <a href="#"><i class="fab fa-facebook-f"></i></a>
+            <a href="#"><i class="fab fa-twitter"></i></a>
+            <a href="#"><i class="fab fa-instagram"></i></a>
+        </div>
+    </div>
+</div>
+<div class="copyright">
+    <p>&copy; <span id="year"></span> Demo Bookstore. All rights reserved.</p>
+</div>
+</footer>
+
+<script src="non-fiction.js"></script>
+</body>
+</html>

@@ -1,0 +1,243 @@
+<!-- <!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>User Dashboard</title>
+  <link rel="stylesheet" href="dashboard.css"/>
+</head>
+<body>
+  <div class="dashboard">
+    <aside class="sidebar">
+      <h2>Welcome</h2>
+      <ul>
+        <li><a href="#">Dashboard</a></li>
+        <li><a href="#">My Rentals</a></li>
+        <li><a href="#">Profile</a></li>
+        <li><a href="#">Logout</a></li>
+        <li><button onclick="clear()">Delete</button></li>
+      </ul>
+    </aside>
+
+    <main class="main">
+      <div class="header">
+        <h1>User Dashboard</h1>
+      </div>
+
+      <div class="content">
+        <section class="welcome-box">
+          <h2>Hello, User!</h2>
+          <p>Welcome back to your Library Account.</p>
+        </section>
+
+        <section class="rentals" id="rental-list">
+          <h3>My Current Rentals</h3>
+          <ul class="rental-items"></ul>
+        </section>
+      </div>
+    </main>
+  </div>
+
+  <script src="dashboard.js"></script>
+</body>
+</html> -->
+
+--
+<!-- <!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>User Dashboard</title>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+  <link rel="stylesheet" href="dashboard.css"/>
+</head>
+<body>
+  <div class="dashboard">
+    <aside class="sidebar">
+      <div class="user-profile">
+        <div class="avatar"><i class="fas fa-user-circle"></i></div>
+        <h2>Welcome, <span id="username">User</span></h2>
+      </div>
+      <ul class="nav-menu">
+        <li class="active"><a href="#" data-section="dashboard"><i class="fas fa-tachometer-alt"></i> Dashboard</a></li>
+        <li><a href="#" data-section="rentals"><i class="fas fa-book"></i> My Rentals</a></li>
+        <li><a href="#" data-section="wishlist"><i class="fas fa-heart"></i> Wishlist</a></li>
+        <li><a href="#" data-section="profile"><i class="fas fa-user"></i> Profile</a></li>
+        <li class="logout-btn"><a href="#"><i class="fas fa-sign-out-alt"></i> Logout</a></li>
+      </ul>
+    </aside>
+
+    <main class="main">
+      <div class="header">
+        <h1>Library Dashboard</h1>
+        <div class="search-box">
+          <input type="text" placeholder="Search books...">
+          <button><i class="fas fa-search"></i></button>
+        </div>
+      </div>
+
+      <div class="content">
+        Dashboard Section
+        <section class="dashboard-section active-section">
+          <div class="welcome-box">
+            <h2>Hello, <span id="greeting-name">User</span>!</h2>
+            <p>Welcome back to your Library Account. You have <span class="highlight">3 active rentals</span>.</p>
+            <div class="quick-stats">
+              <div class="stat-card">
+                <i class="fas fa-book-open"></i>
+                <h3>Active Rentals</h3>
+                <p class="count">3</p>
+              </div>
+              <div class="stat-card">
+                <i class="fas fa-clock"></i>
+                <h3>Due Soon</h3>
+                <p class="count">1</p>
+              </div>
+              <div class="stat-card">
+                <i class="fas fa-history"></i>
+                <h3>Rental History</h3>
+                <p class="count">12</p>
+              </div>
+            </div>
+          </div>
+
+          <div class="recent-activity">
+            <h3><i class="fas fa-bell"></i> Recent Activity</h3>
+            <ul class="activity-list">
+               <li></li>
+              <li>Returned "The Alchemist" - 1 week ago</li>
+              <li>Rented "Linear Algebra" - 2 weeks ago</li> 
+            </ul>
+          </div>
+        </section>
+
+        Rentals Section
+        <section class="rentals-section">
+          <div class="section-header">
+            <h2><i class="fas fa-book"></i> My Current Rentals</h2>
+            <div class="filter-options">
+              <select id="rental-filter">
+                <option value="all">All Rentals</option>
+                <option value="active">Active</option>
+                <option value="due-soon">Due Soon</option>
+                <option value="overdue">Overdue</option>
+              </select>
+            </div>
+          </div>
+          
+          <div class="rental-items" id="rental-list">
+            Will be populated by JavaScript
+            <div class="empty-state">
+              <i class="fas fa-book-open"></i>
+              <p>You don't have any active rentals</p>
+              <button class="browse-btn">Browse Books</button>
+            </div>
+          </div>
+        </section>
+
+        Other sections would follow the same pattern
+      </div>
+    </main>
+  </div>
+
+  <script src="dashboard.js"></script>
+</body>
+</html> -->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>User Dashboard</title>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+  <link rel="stylesheet" href="dashboard.css"/>
+</head>
+<body>
+  <div class="dashboard">
+    <aside class="sidebar">
+      <div class="user-profile">
+        <div class="avatar"><i class="fas fa-user-circle"></i></div>
+        <h2>Welcome, <span id="username">User</span></h2>
+      </div>
+      <ul class="nav-menu">
+        <li class="active"><a href="#" data-section="dashboard"><i class="fas fa-tachometer-alt"></i> Dashboard</a></li>
+        <li><a href="#" data-section="rentals"><i class="fas fa-book"></i> My Rentals</a></li>
+        <li><a href="3rd.html"><i class="fas fa-book-reader"></i> Browse Books</a></li>
+        <li><a href="#" data-section="history"><i class="fas fa-heart"></i> History</a></li>
+        <li><a href="#" data-section="profile"><i class="fas fa-user"></i> Profile</a></li>
+        <li ><a href="#"  class="logout-btn"><i class="fas fa-sign-out-alt"></i> Logout</a></li>
+      </ul>
+    </aside>
+
+    <main class="main">
+      <div class="header">
+        <h1>Library Dashboard</h1>
+        <div class="search-box">
+          <input type="text" placeholder="Search books...">
+          <button><i class="fas fa-search"></i></button>
+        </div>
+      </div>
+
+      <div class="content">
+        <!-- Dashboard Section -->
+        <section class="dashboard-section active-section">
+          <div class="welcome-box">
+            <h2>Hello, <span id="greeting-name">User</span>!</h2>
+            <p>Welcome back to your Library Account. You have <span class="highlight">3 active rentals</span>.</p>
+            <div class="quick-stats">
+              <div class="stat-card">
+                <i class="fas fa-book-open"></i>
+                <h3>Active Rentals</h3>
+                <p class="count">3</p>
+              </div>
+              <div class="stat-card">
+                <i class="fas fa-clock"></i>
+                <h3>Due Soon</h3>
+                <p class="count">1</p>
+              </div>
+              <div class="stat-card">
+                <i class="fas fa-history"></i>
+                <h3>Rental History</h3>
+                <p class="count">12</p>
+              </div>
+            </div>
+          </div>
+
+          <div class="recent-activity">
+            <h3><i class="fas fa-bell"></i> Recent Activity</h3>
+            <ul class="activity-list">
+              <!-- Dynamically populated -->
+            </ul>
+          </div>
+        </section>
+
+        <!-- Rentals Section -->
+        <section class="rentals-section">
+          <div class="section-header">
+            <h2><i class="fas fa-book"></i> My Current Rentals</h2>
+            <div class="filter-options">
+              <select id="rental-filter">
+                <option value="all">All Rentals</option>
+                <option value="active">Active</option>
+                <option value="due-soon">Due Soon</option>
+                <option value="overdue">Overdue</option>
+              </select>
+            </div>
+          </div>
+          
+          <div class="rental-items" id="rental-list">
+            <div class="empty-state">
+              <i class="fas fa-book-open"></i>
+              <p>You don't have any active rentals</p>
+              <a href="3rd.html" class="browse-btn">Browse Books</a>
+            </div>
+          </div>
+        </section>
+      </div>
+    </main>
+  </div>
+
+<script src="dashboard.js"></script>
+</body>
+</html>
